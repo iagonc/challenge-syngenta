@@ -27,5 +27,6 @@ siga o seguinte diretorio Syngenta-challenge\src\main\java e rode o arquivo Syng
 ## :gear: Maven
 Para rodar o programa pelo terminal utilizando o Maven siga os passos abaixo:
 ### Abra o CMD e digite os comandos abaixo
-mvn clean install
-java -jar target/Syngenta-1.0-SNAPSHOT.jar
+- mvn clean install
+- java -jar target/Syngenta-1.0-SNAPSHOT.jar
+
