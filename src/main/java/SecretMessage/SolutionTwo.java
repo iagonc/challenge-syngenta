@@ -16,7 +16,7 @@ public class SolutionTwo implements Strategy {
 
         {
 
-            BufferedImage imagem = ImageIO.read(new File(fileName));
+            BufferedImage imagem = ImageIO.read(new File("Syngenta.bmp"));
 
             int height = imagem.getHeight();
             int width = imagem.getWidth();

@@ -35,7 +35,7 @@ public class SolutionThree implements Strategy {
 
                 if (numOfBits == 8) {
                     if (theByte != 0)
-                        ;
+
                     result.append((char) theByte);
 
                     numOfBits = 0;
