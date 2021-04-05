@@ -9,14 +9,12 @@ import java.io.IOException;
 public class SolutionTwo implements Strategy {
 
     @Override
-    public String doOperation(String fileName) throws IOException {
+    public String doOperation(String fileName){
         StringBuilder result = new StringBuilder();
         String binary = "";
 
-
-        {
-
-            BufferedImage imagem = ImageIO.read(new File("Syngenta.bmp"));
+        try {
+            BufferedImage imagem = ImageIO.read(new File(fileName));
 
             int height = imagem.getHeight();
             int width = imagem.getWidth();
@@ -27,31 +25,37 @@ public class SolutionTwo implements Strategy {
                     int RGBA = imagem.getRGB(x, y);
 
                     Color color = new Color(RGBA);
-                    binary = filterThenReturnABinary(color,x);
+                    binary = filterThenReturnABinary(color, x);
 
                     result.append(binary);
-                    if(result.toString().length()%9 == 0){
+                    if (result.toString().length() % 9 == 0) {
                         result.append(" ");
                     }
 
                 }
             }
-            return result.toString();
+
+
+        }catch (IOException e) {
+            e.printStackTrace();
         }
+        return result.toString();
     }
 
-    private String filterThenReturnABinary(Color color, int x){
+    private String filterThenReturnABinary(Color color, int x) {
 
-    int green = color.getGreen();
-    int red = color.getRed();
-    int blue = color.getBlue();
-    if (x % 7 == 0) {
-        return "";
-    }if (green == 255 && red == 255 && blue == 255) {
-        return "0";
-    } else if (green > red && green > blue) {
-        return "1";
-    }
+        int green = color.getGreen();
+        int red = color.getRed();
+        int blue = color.getBlue();
+
+        if (x % 7 == 0) {
+            return "";
+        }
+        if (green == 255 && red == 255 && blue == 255) {
+            return "0";
+        } else if (green > red && green > blue) {
+            return "1";
+        }
         return "";
     }
 }

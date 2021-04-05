@@ -12,7 +12,7 @@ public class SolutionOne implements Strategy {
         StringBuilder result = new StringBuilder();
 
         try {
-            BufferedImage imagem = ImageIO.read(new File("Syngenta.bmp"));
+            BufferedImage imagem = ImageIO.read(new File(fileName));
 
             int height = imagem.getHeight();
             int width = imagem.getWidth();
@@ -34,7 +34,7 @@ public class SolutionOne implements Strategy {
                         result.append((char) binario);
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotEquals;
 
 public class SolutionTwoTest {
     final String VALID_MESSAGE = "This message was found";
-    final String FILE_NAME = "Syngenta.bpm";
+    final String FILE_NAME = "Syngenta.bmp";
 
     @Test
     public void givenAValidImagee_thenNoMessageWasFound() throws IOException {
