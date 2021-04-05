@@ -24,3 +24,8 @@ Para que este rode em sua máquina, siga os passos abaixo:
 $ git clone https://github.com/iagonc/challenges_syngenta
 ### Abra o arquivo com o Intelijj
 siga o seguinte diretorio Syngenta-challenge\src\main\java e rode o arquivo SyngentaChallenge
+## :gear: Maven
+Para rodar o programa pelo terminal utilizando o Maven siga os passos abaixo:
+### Abra o CMD e digite os comandos abaixo
+mvn clean install
+java -jar target/Syngenta-1.0-SNAPSHOT.jar
